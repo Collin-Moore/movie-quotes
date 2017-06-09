@@ -4,5 +4,13 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  forebaseConfig: {
+    apiKey: "AIzaSyD2MjoFTzMfCU3eG_XTsL246rN-Gzg3m8I",
+    authDomain: "moorect-movie-quotes.firebaseapp.com",
+    databaseURL: "https://moorect-movie-quotes.firebaseio.com",
+    projectId: "moorect-movie-quotes",
+    storageBucket: "moorect-movie-quotes.appspot.com",
+    messagingSenderId: "229844026706"
+  }
 };
