@@ -14,7 +14,7 @@ interface MovieQuote {
 })
 export class AppComponent {
 
-  readonly quotesPath = "quotes";
+  readonly quotesPath = 'quotes';
 
   formMovieQuote: MovieQuote = {
     'movie': '',
@@ -22,10 +22,10 @@ export class AppComponent {
   };
 
   // movieQuotes: Array<MovieQuote> = [
-  //   { "movie": "Rocky", "quote": "Yo Adrian" },
-  //   { "movie": "Terminator", "quote": "I'll be back" },
-  //   { "movie": "Titanic", "quote": "I'm the king of the world!" },
-  //   { "movie": "The Princess Bride", "quote": "Hello. My name is Inigo Montoya. You killed my father. Prepare to die." }
+  //   { 'movie': 'Rocky', 'quote': 'Yo Adrian' },
+  //   { 'movie': 'Terminator', 'quote': "I'll be back" },
+  //   { 'movie': 'Titanic', 'quote': "I'm the king of the world!" },
+  //   { 'movie': 'The Princess Bride', 'quote': 'Hello. My name is Inigo Montoya. You killed my father. Prepare to die.' }
   // ];
 
   movieQuotesStream: FirebaseListObservable<MovieQuote[]>;
@@ -49,12 +49,12 @@ export class AppComponent {
         'movie': ''
       }
     } catch (e) {
-      console.log("Form error:", e);
+      console.log('Form error:', e);
     }
   }
 
   edit(movieQuote: MovieQuote): void {
-    // console.log("Edit: ", movieQuote);
+    // console.log('Edit: ', movieQuote);
 
     this.formMovieQuote = movieQuote;
   }
