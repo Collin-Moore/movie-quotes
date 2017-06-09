@@ -35,16 +35,31 @@ export class AppComponent {
   }
 
   onSubmit(): void {
-    //Local only
+    // Local only
     // this.movieQuotesStream.unshift(this.formMovieQuote);
     try {
-    this.movieQuotesStream.push(this.formMovieQuote);
-    this.formMovieQuote = {
-      'quote': '',
-      'movie': ''
-    }
+      if (this.formMovieQuote.$key) {
+        this.movieQuotesStream.update(this.formMovieQuote.$key, this.formMovieQuote);
+      } else {
+        this.movieQuotesStream.push(this.formMovieQuote);
+      }
+
+      this.formMovieQuote = {
+        'quote': '',
+        'movie': ''
+      }
     } catch (e) {
       console.log("Form error:", e);
     }
+  }
+
+  edit(movieQuote: MovieQuote): void {
+    // console.log("Edit: ", movieQuote);
+
+    this.formMovieQuote = movieQuote;
+  }
+
+  remove(movieQuotKey: string): void {
+    this.movieQuotesStream.remove(movieQuotKey);
   }
 }
