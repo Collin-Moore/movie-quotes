@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  forebaseConfig: {
+  firebaseConfig: {
     apiKey: "AIzaSyD2MjoFTzMfCU3eG_XTsL246rN-Gzg3m8I",
     authDomain: "moorect-movie-quotes.firebaseapp.com",
     databaseURL: "https://moorect-movie-quotes.firebaseio.com",
